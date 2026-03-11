@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DS HW 5 — Interactive Visualizations</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f6f9;
+            color: #333;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.1rem; opacity: 0.85; }
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+        .card a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+            padding: 1.8rem 2rem;
+        }
+        .card-icon {
+            font-size: 2.5rem;
+            margin-right: 1.5rem;
+            width: 60px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .card-body h2 { font-size: 1.3rem; margin-bottom: 0.4rem; color: #1a1a2e; }
+        .card-body p { font-size: 0.95rem; color: #666; line-height: 1.5; }
+        .tag {
+            display: inline-block;
+            background: #e8f0fe;
+            color: #1a73e8;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            margin-right: 0.3rem;
+        }
+        .section-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #999;
+            margin-bottom: 0.8rem;
+            margin-top: 1rem;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #aaa;
+            font-size: 0.85rem;
+        }
+        footer a { color: #1a73e8; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Data Science Homework 5</h1>
+        <p>Interactive Visualizations &mdash; Johns Hopkins University</p>
+    </header>
+    <div class="container">
+        <p class="section-label">Part 1 &mdash; GDP Analysis</p>
+        <div class="card">
+            <a href="stacked_bar.html">
+                <div class="card-icon">&#x1F4CA;</div>
+                <div class="card-body">
+                    <h2>GDP Stacked Bar Plot</h2>
+                    <p>Interactive stacked bar chart of GDP by country, grouped by UN region, using IMF forecast data scraped from Wikipedia.</p>
+                    <span class="tag">Plotly</span>
+                    <span class="tag">Web Scraping</span>
+                    <span class="tag">IMF Data</span>
+                </div>
+            </a>
+        </div>
 
+        <p class="section-label">Part 2 &mdash; MRICloud Brain Volume</p>
+        <div class="card">
+            <a href="sankey.html">
+                <div class="card-icon">&#x1F9E0;</div>
+                <div class="card-body">
+                    <h2>MRICloud Sankey Diagram</h2>
+                    <p>Multi-level Sankey diagram showing brain volume composition for Subject 127 (Type 1, Level 5), from intracranial volume down through the regional hierarchy.</p>
+                    <span class="tag">Plotly</span>
+                    <span class="tag">MRICloud</span>
+                    <span class="tag">Sankey</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <footer>
+        JHU Data Science &mdash; <a href="https://github.com/jinsungsur/data_science">View on GitHub</a>
+    </footer>
+</body>
+</html>
